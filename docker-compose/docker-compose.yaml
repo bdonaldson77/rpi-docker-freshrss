@@ -21,4 +21,4 @@ services:
       - "6767:80"
     environment:
       TZ: America/Vancouver
-      CRON_MIN: '*/20'
+      CRON_MIN: '*/2'
