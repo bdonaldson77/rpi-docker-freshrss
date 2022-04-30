@@ -7,7 +7,7 @@ volumes:
 services:
 
   freshrss:
-    image: freshrss/freshrss
+    image: freshrss/freshrss:edge-arm
     container_name: freshrss
     hostname: freshrss
     restart: unless-stopped
@@ -17,6 +17,8 @@ services:
     volumes:
       - data:/var/www/FreshRSS/data
       - extensions:/var/www/FreshRSS/extensions
+    ports:
+      - "6767:80"
     environment:
       TZ: America/Vancouver
       CRON_MIN: '*/20'
